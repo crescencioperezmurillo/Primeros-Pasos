@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2025 Crescencio Perez Murillo
+
+    Este archivo forma parte del proyecto Converter2025.
+    Está prohibida la reproducción, distribución o modificación sin
+    autorización expresa del titular de los derechos.
+
+    Descripción:
+    Archivo de recursos de cadenas de texto para la aplicación.
+    Contiene todos los textos mostrados en la interfaz y mensajes.
+-->
+
+<resources>
+        <!-- Nombre de la aplicación -->
+
+        <string name="app_name">Converter2025</string>
+
+        <!-- Mensaje Toast mostrado cuando el campo de entrada está vacío -->
+
+        <string name="toast_empty_input">Por favor, introduzca una cantidad</string>
+
+        <!-- Mensaje Toast mostrado cuando el usuario ingresa un valor no numérico -->
+
+        <string name="toast_invalid_input">Ingrese un número válido</string>
+
+        <!-- Texto que indicar la cantidad en euros a ingresar -->
+
+        <string name="instruction">Introduzca la cantidad de euros que desea convertir</string>
+
+        <!-- Definimos un texto guía o Hint para el campo de la entrada de euros -->
+
+        <string name="hint_euros">Cantidad en euros</string>
+
+        <!-- Texto que aparece en el botón para realizar la conversión a rupias -->
+
+        <string name="button_convert">Convertir</string>
+
+        <!-- Descripción accesible para la imagen de monedas (Buenas practicas de Android) -->
+
+        <string name="desc_monedas_image">Imagen de monedas</string>
+
+        <!-- Mensaje que muestra la cantidad convertida a rupias, con formato decimal -->
+
+        <string name="conversion_result">La cantidad introducida se corresponde con %.2f Rupias.</string>
+</resources>

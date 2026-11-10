@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2025 Crescencio Perez Murillo
+
+    Este archivo forma parte del proyecto Converter2025.
+    Está prohibida la reproducción, distribución o modificación sin
+    autorización expresa del titular de los derechos.
+
+    Descripción:
+    Archivo de layout XML que define la interfaz principal de la aplicación,
+    con los componentes para convertir euros a rupias.
+-->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Imagen que muestra monedas como representación visual de la pantalla principal -->
+    <ImageView
+        android:id="@+id/imageCoins"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/monedas"
+        android:contentDescription="@string/desc_monedas_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Texto básico que indica donde se debe de introducir la cantidad de dinero a convertir -->
+    <TextView
+        android:id="@+id/textInstruction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/instruction"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/imageCoins"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Campo de entrada para ingresar la cantidad en euros -->
+    <EditText
+        android:id="@+id/editEuroAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:autofillHints="currencyAmount"
+        android:background="@android:color/white"
+        android:hint="@string/hint_euros"
+        android:importantForAutofill="yes"
+        android:inputType="numberDecimal"
+        android:maxWidth="300dp"
+        android:minWidth="150dp"
+        android:minHeight="48dp"
+        android:paddingVertical="12dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="#555555"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInstruction"
+        tools:ignore="TextContrastCheck" />
+
+    <!-- Botón que el usuario debe presionar para realizar la conversión -->
+    <Button
+        android:id="@+id/buttonConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_convert"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/editEuroAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Texto donde se mostrará el resultado de la conversión -->
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/buttonConvert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
