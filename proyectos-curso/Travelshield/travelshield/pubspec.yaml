@@ -1,0 +1,58 @@
+# TravelShieldApp - Aplicación Flutter para gestión del estado de salud en viajes internacionales
+# Derechos de autor © 2025 Crescencio Pérez Murillo. Todos los derechos reservados.
+# Uso y distribución:
+# Este código fuente y cualquier archivo asociado son propiedad exclusiva de Crescencio Pérez Murillo.
+# Queda prohibida la reproducción, distribución, modificación, o cualquier uso no autorizado sin permiso.
+# Licencia:
+# El uso de este código está sujeto a los términos y condiciones establecidos por el titular.
+# Contacto:
+# Para consultas sobre licencias o permisos, por favor contactar a: contacto@travelshield.com
+
+# Nombre de la app o paquete
+name: Travelshield
+
+# Descripción corta del proyecto
+description: "Guia sanitaria basica para viajeros internacionales"
+
+# Evitamos que el paquete se publique en pub.dev (mantiene privado)
+publish_to: 'none'
+
+# Versión y número de compilación de la app
+version: 1.0.0+1
+
+# Definimos el entorno SDK de Dart requerido para el proyecto
+environment:
+  sdk: ^3.7.0
+
+# Dependencias externas que la app necesita para funcionar
+dependencies:
+  flutter:
+    sdk: flutter  # SDK principal de Flutter
+  shared_preferences: ^2.0.15  # Para guardar preferencias locales
+  pdf: ^3.9.0  # Para generar documentos PDF
+  printing: ^5.10.0  # Para impresión y vista previa de documentos
+  cupertino_icons: ^1.0.8  # Iconos
+
+# Dependencias para desarrollo y testing
+dev_dependencies:
+  flutter_test:
+    sdk: flutter  # Herramientas para pruebas unitarias y widget tests
+  flutter_lints: ^5.0.0  # Conjunto de reglas para mejorar la calidad del código
+  flutter_launcher_icons: ^0.13.1 # Dependencia que permite crear el icono de la aplicacion
+
+# Configuración específica de Flutter
+flutter:
+  assets:
+    - assets/images/banners/       # Carpeta con imágenes para banners
+    - assets/icons/                # Carpeta con iconos
+    - assets/images/other_images/  # Otras imágenes usadas en la app
+
+  # Permite usar iconos de Material Design en la app
+  uses-material-design: true
+
+# Permite crear el icono de la app para Android e IOS
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/icono.jpg"
