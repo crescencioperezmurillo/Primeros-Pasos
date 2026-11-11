@@ -1,215 +1,66 @@
 # TravelShield
 
----
+## Descripción del proyecto
 
-## Descripción del Proyecto
+TravelShield es una aplicación móvil multiplataforma desarrollada mediante Flutter y Dart, concebida como una herramienta de consulta, planificación y orientación sanitaria dirigida a personas que tienen previsto realizar viajes nacionales e internacionales. Su finalidad principal es facilitar la preparación de los desplazamientos desde una perspectiva preventiva, proporcionando información sanitaria relacionada con el país de destino y permitiendo al usuario gestionar determinados aspectos de su salud antes y durante el viaje.
 
-TravelShield es una aplicación móvil multiplataforma desarrollada con Flutter, 
-diseñada para asistir a los viajeros en la planificación de sus viajes y en la gestión y
-protección de su salud durante el viaje. 
-La aplicación combina funcionalidades de selección de destino, seguimiento histórico de viajes 
-y manejo personalizado de información médica, ofreciendo una experiencia integrada y segura para 
-el usuario, a la vez que permite una gestión eficaz del estado de salud antes del viaje.
+La aplicación aborda la importancia de la prevención sanitaria en el contexto de la movilidad internacional, teniendo en cuenta que las condiciones epidemiológicas, los riesgos ambientales, la distribución geográfica de determinadas enfermedades y las necesidades de inmunización pueden variar considerablemente entre países y regiones.
 
----
+A través de TravelShield, el usuario puede seleccionar un destino y consultar recomendaciones sanitarias específicas, así como información sobre las vacunas correspondientes y el calendario vacunal asociado al país elegido. La aplicación incorpora también un sistema de gestión del historial de viajes, que permite consultar desplazamientos anteriores y futuros, revisar sus fechas y recomendaciones sanitarias asociadas e imprimir la información correspondiente para disponer de ella durante el viaje, incluso en situaciones en las que no se cuente con cobertura móvil.
+
+Asimismo, TravelShield dispone de un apartado denominado *Mi salud*, destinado a la gestión de información médica personal, incluyendo datos relacionados con vacunas y medicamentos. Esta funcionalidad permite mantener organizada la información sanitaria del usuario y facilitar su consulta durante la planificación de los desplazamientos.
+
+La aplicación integra estas funcionalidades en una interfaz organizada mediante diferentes pantallas y elementos de navegación, con una pantalla principal desde la que se accede a las secciones fundamentales: planificación del viaje, historial de desplazamientos y gestión de información médica. También incorpora un menú lateral (*Drawer*) que proporciona acceso a opciones adicionales, configuraciones y apartados complementarios de la aplicación.
+
+Desde el punto de vista del desarrollo tecnológico, TravelShield ha sido construida utilizando Flutter, un framework de desarrollo multiplataforma que permite crear aplicaciones móviles mediante una base de código común. El lenguaje de programación empleado es Dart, utilizado para implementar la lógica de funcionamiento, gestionar los componentes de la interfaz y desarrollar las distintas funcionalidades de la aplicación. Para la construcción visual se emplean componentes de Material Design, junto con recursos gráficos locales, imágenes, iconos y elementos personalizados que contribuyen a mantener una presentación visual coherente.
+
+La estructura del proyecto contempla la separación de las diferentes pantallas, componentes y conjuntos de datos, organizando las funcionalidades en módulos específicos. Entre ellos se encuentran los apartados destinados a la selección de países, el historial de viajes y la gestión de información médica, además de los recursos de datos relacionados con los países y las vacunas.
+
+El desarrollo de TravelShield constituye una aplicación práctica de los conocimientos adquiridos en programación, desarrollo de interfaces y construcción de aplicaciones móviles, integrando estos elementos en una propuesta tecnológica con una finalidad concreta vinculada a la prevención sanitaria y la promoción de la salud.
 
 ## Objetivos del proyecto
 
-- Facilitar la planificación de viajes seleccionando destinos y mostrando recomendaciones sanitarias.
-- Permitir al usuario consultar su historial de viajes pasados y futuros.
-- Ofrecer una sección para la gestión de la información médica personal, optimizando la seguridad y la salud durante los viajes.
-- Proporcionar una interfaz intuitiva, visualmente atractiva y accesible.
+- Desarrollar una aplicación móvil multiplataforma utilizando Flutter y Dart.
+- Facilitar la planificación de viajes mediante la selección de destinos y la consulta de información sanitaria.
+- Proporcionar recomendaciones sanitarias y vacunales en función del país seleccionado.
+- Incorporar información sobre calendarios vacunales y características de las vacunas.
+- Permitir al usuario consultar y gestionar un historial de viajes anteriores y futuros.
+- Facilitar la conservación e impresión de información relacionada con los desplazamientos y sus recomendaciones sanitarias.
+- Incorporar un apartado para la gestión de información médica personal, incluyendo vacunas y medicamentos.
+- Organizar la información mediante una estructura modular que facilite su consulta y mantenimiento.
+- Desarrollar una interfaz intuitiva, accesible y visualmente coherente mediante componentes de Flutter y Material Design.
+- Aplicar conocimientos de programación, diseño de interfaces y desarrollo de aplicaciones móviles en una herramienta digital con una finalidad práctica vinculada a la prevención y la promoción de la salud.
 
----
+## Tecnologías utilizadas
 
-## Tecnologías Utilizadas
+- **Flutter:** framework empleado para el desarrollo de la aplicación móvil multiplataforma.
+- **Dart:** lenguaje de programación utilizado para implementar la lógica de funcionamiento y los componentes de la aplicación.
+- **Material Design:** sistema de diseño utilizado como referencia para la construcción y organización de la interfaz de usuario.
+- **Widgets personalizados:** componentes desarrollados específicamente para la aplicación, como los botones de acceso a las funcionalidades principales.
+- **Assets locales:** conjunto de imágenes, iconos y recursos gráficos incorporados para complementar la interfaz y mejorar la experiencia visual.
 
-- **Flutter**: Framework UI para construir la aplicación móvil multiplataforma.
-- **Dart**: Lenguaje de programación utilizado para el desarrollo de la app.
-- **Material Design**: Para la implementación de la interfaz de usuario.
-- **Assets locales**: Imágenes y recursos gráficos incluidos para la experiencia visual.
+## Estructura y funcionalidades de la aplicación
 
----
+TravelShield presenta una organización modular en la que las distintas funcionalidades se distribuyen en pantallas y componentes específicos. La pantalla principal actúa como punto de entrada a la aplicación y permite acceder a sus tres áreas funcionales fundamentales.
 
-## Estructura del Proyecto
+La primera de ellas, *Planifica tu viaje*, permite seleccionar un país de destino y consultar información sanitaria relacionada con el desplazamiento. Incluye recomendaciones preventivas y acceso a información sobre las vacunas y el calendario vacunal correspondiente al país seleccionado. Esta sección constituye el núcleo de consulta sanitaria de la aplicación y permite al usuario disponer de información relevante durante la preparación del viaje.
 
-- `lib/`
-    - `home_screen/`
-        - `home_screen.dart`: Pantalla principal con menú y navegación entre secciones.
-        - `drawers.dart`: Widget de menú lateral (Drawer) con navegación adicional.
-    - `others_screen/`
-        - `country_selection.dart`: Pantalla para selección de destinos.
-        - `history_screen.dart`: Pantalla para visualización del historial de viajes.
-        - `checklist_screen.dart`: Pantalla para gestión de información médica personal.
-    - `data/`
-        - `country_list.dart`: Lista de 15 paises usados en la app
-        - `vaccine_list.dart`: Lista de vacunas, fecha de administración e información adicional.
-    
+La segunda funcionalidad, *Historial de viajes*, permite visualizar los desplazamientos anteriores y futuros, consultar sus fechas y revisar la información sanitaria asociada a cada uno de ellos. También incorpora la posibilidad de imprimir la información del viaje seleccionado, facilitando su conservación y consulta cuando no se dispone de conexión o cobertura móvil.
 
-- `assets/images/`: Contiene imágenes usadas en la aplicación
-    - `banners/`: Contiene los banners informativos de la aplicación
-    - `others_images`: Contiene otras imagenes usadas en la aplicación
-- `assets/icons/`: Contiene el icono de la aplicación
+La tercera sección, *Mi salud*, está destinada a la organización y gestión de información médica personal. Permite mantener reunidos datos relacionados con las vacunas, los medicamentos y otros elementos de interés sanitario para el usuario, facilitando su consulta durante la planificación y realización de los desplazamientos.
 
----
+La navegación entre estas secciones se realiza desde una pantalla principal que incorpora un menú de acceso mediante botones personalizados y un menú lateral desplegable (*Drawer*). La interfaz se complementa con elementos gráficos, imágenes de bienvenida y recursos visuales que contribuyen a identificar las distintas áreas de la aplicación.
 
-## Descripción Técnica del Código Principal (HomeScreen)
+## Ámbito de aplicación
 
-El widget `HomeScreen` es un `StatelessWidget` que actúa como la pantalla principal y
-punto de entrada para las funcionalidades clave de la app. Su estructura es la siguiente:
+TravelShield se sitúa en el ámbito de la salud digital, la medicina preventiva y la información sanitaria aplicada a los viajes. Su planteamiento combina el desarrollo de software móvil con un propósito informativo y preventivo, orientado a facilitar la preparación sanitaria de los viajeros y la organización de su información médica personal.
 
-- **AppBar personalizado:** Barra superior con color distintivo (`Color(0xFF00BFA6)`) y título centrado.
-- **Drawer:** Menú lateral desplegable para navegación adicional.
-- **Cuerpo (`body`):**
-    - Un contenedor con una imagen de bienvenida y texto descriptivo, organizado con `Row` y `Expanded` para adaptarse a diferentes tamaños de pantalla.
-    - Dos filas de botones grandes con iconos y texto para acceder a las funciones principales:
-        1. Planifica tu viaje (destino).
-        2. Historial de viajes.
-        3. Mi salud.
-    - Cada botón está implementado con el widget `LargeRoundButton`, que permite personalizar tamaño, icono, texto y acción al pulsar.
-    - Texto al pie con derechos reservados.
+La aplicación integra conceptos relacionados con la prevención de enfermedades, la inmunización, la planificación sanitaria y el seguimiento de los desplazamientos, ofreciendo un entorno digital desde el que consultar y organizar información relevante para la salud durante los viajes.
 
-El código define una clase privada `_HomeOption` para modelar las opciones del menú principal y facilitar la extensión o modificación futura.
+La información proporcionada por la aplicación tiene carácter orientativo y no sustituye la valoración individual de los profesionales sanitarios ni las recomendaciones oficiales de los organismos de salud y medicina del viajero. Las indicaciones vacunales y preventivas deben contrastarse con las fuentes sanitarias oficiales y con las circunstancias particulares de cada viajero.
 
----
+## Contexto formativo
 
-## Funcionalidades Detalladas
+Este proyecto forma parte de los trabajos desarrollados durante la formación en Programación de Aplicaciones para Dispositivos Móviles. Su realización permite aplicar conocimientos de desarrollo multiplataforma y programación con Dart, integrándolos en una propuesta de aplicación con una finalidad concreta y un ámbito de utilización definido.
 
-1. **Planifica tu viaje**  
-   Permite seleccionar un destino y consultar recomendaciones sanitarias específicas para el país elegido. También, proporciona el calendario vacunal vigente para el pais seleccionado
-
-2. **Historial de viajes**  
-   Visualiza viajes anteriores y futuros, con detalles y recomendaciones sanitarias asociadas. Permite imprimir el viaje seleccionado
-
-3. **Mi salud**  
-   Gestión completa de datos médicos personales para facilitar el cuidado durante el viaje.
-
----
-
-## Uso de Widgets Personalizados
-
-- `LargeRoundButton`:
-    - Botón redondo grande con icono en centro, título y descripción.
-    - Incluye sombra y color personalizado.
-    - Tamaño ajustable con la propiedad `large`.
-    - Detecta toques y ejecuta una función pasada por parámetro (`onTap`).
-
----
-
-## Manual de Usuario
-
----
-
-### Introducción
-
-TravelShield es una app para planificar viajes y cuidar la salud del usuario durante el proceso. 
-Este manual facilita su uso detallando cada funcionalidad y ofreciendo consejos para sacar el máximo provecho.
-
----
-
-### Requisitos Previos
-
-- Dispositivo móvil con Android o iOS.
-- App instalada y actualizada.
-- Acceso a internet para funciones que requieren datos en línea.
-- Permisos básicos otorgados (almacenamiento, etc.).
-
----
-
-### Navegación Principal
-
-Al iniciar, verás:
-
-- Imagen y texto de bienvenida.
-- Tres botones principales para acceder a funcionalidades:
-    1. **Planifica tu viaje**
-    2. **Historial de viajes**
-    3. **Mi salud**
-- Menú lateral para acceso a otras opciones.
-
----
-
-### Funcionalidades
-
-#### 1. Planifica tu viaje
-
-- Selecciona tu destino y tu fecha de viaje.
-- Obtén recomendaciones sanitarias para el país elegido.
-- Podrás consultar el calendario vacunal correspondiente.
-- Planifica tu viaje con información relevante de salud.
-
-#### 2. Historial de viajes
-
-- Consulta viajes pasados y futuros.
-- Revisa detalles, fechas y recomendaciones médicas.
-- Puedes imprimir la información que necesites, por si no dispones de cobertura movil
-
-#### 3. Mi salud
-
-- Gestiona tu información médica personal: vacunas, medicamentos, etc.
-- Mantén tu perfil actualizado para recibir recomendaciones personalizadas.
-
----
-
-### Menú Lateral (Se accede desde la pantalla principal)
-
-- Accede deslizando o tocando el icono menú.
-- Opciones adicionales, configuraciones y soporte.
-- Opciones de cierre de sesión y legal.
-
----
-
-### Consejos para un Mejor Uso de la app
-
-- Actualiza tu información médica y de viajes frecuentemente.
-- Revisa el historial para planificar viajes futuros con seguridad.
-- Explora todas las opciones del menú lateral.
-
----
-
-### Preguntas Frecuentes
-
-- **¿Funciona sin internet?**  
-  Algunas funciones básicas sí, pero las recomendaciones y datos actualizados requieren conexión.
-
-- **¿La información médica es segura?**  
-  Sí, se almacena localmente y no se comparte sin permiso.
-
-- **¿Cómo actualizar la app?**  
-  A través de Google Play Store o Apple App Store.
-
----
-
-### Soporte Técnico
-
-- Email: soporte@travelshield.com
-- Web: www.travelshield.com/support
-- Opción *Ayuda y soporte* dentro de la app.
-
----
-
-### Cierre
-
-Gracias por confiar en TravelShield. Disfruta de tus viajes con la seguridad que te brinda esta herramienta.
-
----
-
-## Conclusiones y Recomendaciones para el Desarrollo Futuro
-
-- **Mejoras UI/UX:** Incluir animaciones y tutoriales interactivos para nuevos usuarios.
-- **Sincronización en la nube:** Para respaldar y sincronizar información entre dispositivos.
-- **Notificaciones:** Alertas personalizadas según destino y estado de salud.
-- **Multilenguaje:** Soporte para múltiples idiomas.
-- **Accesibilidad:** Mejoras para usuarios con discapacidades visuales o motoras.
-
----
-
-## Licencia
-
-Este proyecto está bajo licencia MIT. Consulta el archivo LICENSE para más detalles.
-Todas las imágenes usadas en este proyecto se encuentran bajo la licencia CC. 
-
----
-
-# Fin del documento
-
+El desarrollo de TravelShield permite trabajar con la construcción de interfaces mediante widgets, la organización modular del código, la navegación entre pantallas, la creación de componentes personalizados y la gestión de diferentes conjuntos de información. Asimismo, representa una oportunidad para aplicar los conocimientos técnicos adquiridos a un proyecto que combina el desarrollo de software con un ámbito de interés relacionado con la salud pública y la prevención sanitaria.
