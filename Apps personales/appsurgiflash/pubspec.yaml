@@ -1,0 +1,30 @@
+name: appsurgiflash
+description: "FLASHCARDS DE INSTRUMENTAL QUIRURGICO"
+
+publish_to: 'none'
+
+environment:
+  sdk: ^3.7.0
+
+dependencies:
+  flip_card: ^0.7.0
+  flutter:
+    sdk: flutter
+  provider: ^6.1.1
+  shared_preferences: ^2.0.15
+  image_picker: ^1.0.0
+  pdf: ^3.10.1
+  printing: ^5.10.2
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/banner_images/
+    - assets/images/instrumental_images/
+    - assets/icons/

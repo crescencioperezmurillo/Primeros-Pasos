@@ -1,0 +1,17 @@
+final Map<String, List<String>> interventionInstruments = {
+  'Colecistectomía laparoscópica': ['inst01', 'inst02', 'inst12'],
+  'Apendicectomía': ['inst01', 'inst05', 'inst10'],
+  'Herniorrafia inguinal': ['inst02', 'inst10'],
+  'Artroplastia de cadera': ['inst04', 'inst07'],
+  'Reducción de fractura de radio': ['inst03', 'inst06'],
+  'Artroscopia de rodilla': ['inst12', 'inst09'],
+  'Cesárea': ['inst01', 'inst05', 'inst07', 'inst09'],
+  'Histerectomía': ['inst01', 'inst04', 'inst08'],
+  'Legrado uterino': ['inst02', 'inst05'],
+  'Craneotomía': ['inst01', 'inst04', 'inst07', 'inst09'],
+  'Laminectomía': ['inst04', 'inst08'],
+  'Derivación ventrículo-peritoneal': ['inst01', 'inst05', 'inst12'],
+  'Bypass coronario': ['inst01', 'inst10', 'inst11'],
+  'Reemplazo valvular': ['inst01', 'inst04', 'inst07'],
+  'Pericardiectomía': ['inst03', 'inst09'],
+};
